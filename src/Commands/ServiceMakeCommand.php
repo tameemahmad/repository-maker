@@ -80,7 +80,7 @@ class ServiceMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/resources/stubs';
+        return __DIR__ . 'vendor/temify/repository-pattern-maker/service.stub';
     }
 
     /**
@@ -90,7 +90,7 @@ class ServiceMakeCommand extends GeneratorCommand
      */
     protected function getInterfaceStub()
     {
-        return __DIR__ . '/resources/stubs/serviceInterface.stub';
+        return __DIR__ . 'vendor/temify/repository-pattern-maker/serviceInterface.stub';
     }
     /**
      * Build the class with the given name.
