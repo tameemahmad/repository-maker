@@ -30,7 +30,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Temify\\RepositoryPattern\\RepositoryPatterServiceProvider"
+                "Temify\\RepositoryPattern\\RepositoryPatterServiceProvider",
+                "Temify\\RepositoryPattern\\ServiceLayerServiceProviderr"
             ],
             "aliases": {
                 "RepositoryPattern": "Temify\\RepositoryPattern\\Facades\\RepositoryPattern"
