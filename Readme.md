@@ -10,7 +10,7 @@ composer require temify/laravel-repository-pattern
 
 ## Features
 
-Will generate 
+Will generate
 
 * Service class
 * Interface implementations
@@ -93,10 +93,10 @@ interface ProductRepositoryInterface
 
 namespace App\Repositories;
 
-use App\Car;
+use App\Models\Product;
 
 
-class CarRepository implements CarRepositoryInterface
+class ProductRepository implements ProductRepositoryInterface
 {
     /**
      * Get's a record by it's ID
@@ -106,7 +106,7 @@ class CarRepository implements CarRepositoryInterface
      */
     public function get($id)
     {
-        return Car::find($id);
+        return Product::find($id);
     }
 
     /**
@@ -116,7 +116,7 @@ class CarRepository implements CarRepositoryInterface
      */
     public function all()
     {
-        return Car::all();
+        return Product::all();
     }
 
     /**
@@ -126,7 +126,7 @@ class CarRepository implements CarRepositoryInterface
      */
     public function delete($id)
     {
-        Car::destroy($id);
+        Product::destroy($id);
     }
 
     /**
