@@ -76,15 +76,10 @@ interface ProductRepositoryInterface
      */
     public function delete($id);
 
-    /**
-     * Updates a record.
-     *
-     * @param int
-     * @param array
-     */
-    public function update($id, array $data);
+
 }
 ```
+```Repositories/ProductRepository.php```
 
 #### ProductRepository.php
 
