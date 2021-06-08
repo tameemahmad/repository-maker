@@ -12,7 +12,7 @@ class RepositoryPattern extends Command
      *
      * @var string
      */
-    protected $signature = 'make:repo {name : Class (Singular), e.g User, Prpduct, Image, Post}';
+    protected $signature = 'make:rep {name : Class (Singular), e.g User, Prpduct, Image, Post}';
 
     /**
      * The console command description.
