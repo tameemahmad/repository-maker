@@ -15,6 +15,8 @@ class RepositoryService {
     {
         if (!file_exists($path=base_path('/Repositories')))
             mkdir($path, 0777, true);
+        if (!file_exists($path=base_path('/Models/{$name}.php')))
+            mkdir($path, 0777, true);
 
         self::MakeProvider();
         self::MakeInterface($name);
