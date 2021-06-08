@@ -80,7 +80,7 @@ class ServiceMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return base_path('vendor/temify/repository-pattern-maker/stubs/service.stub');
+        return base_path('vendor/temify/repository-pattern-maker/resources/stubs/service.stub');
     }
 
     /**
@@ -90,7 +90,7 @@ class ServiceMakeCommand extends GeneratorCommand
      */
     protected function getInterfaceStub()
     {
-        return base_path('vendor/temify/repository-pattern-maker/stubs/serviceInterface.stub');
+        return base_path('vendor/temify/repository-pattern-maker/resources/stubs/serviceInterface.stub');
     }
     /**
      * Build the class with the given name.
