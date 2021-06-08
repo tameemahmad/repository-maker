@@ -1,4 +1,4 @@
-# Laravel Repository Pattern Implementation
+# Implementation of repository patteren and service layer using commands
 
 A simple Laravel 5 and laravel 6 library that allows you to implement Repository Pattern with a single command
 
@@ -10,15 +10,15 @@ composer require temify/laravel-repository-pattern
 
 ## Features
 
-Will generate all the functionality for Repository pattern implementation
+Will generate 
 
-* ServiceClass
-* Interface
-* ServiceProvider
+* Service class
+* Interface implementations
+* ServiceProvider for contracts
 
 ## Enable the package (Optional)
 
-This package implements Laravel auto-discovery feature. After you install it the package provider and facade are added automatically for laravel >= 5.5.
+This package implements Laravel auto-discovery feature. After you install it the package provider and facade are added automatically .
 
 ## Configuration
 
@@ -35,7 +35,7 @@ php artisan vendor:publish --provider="Temify\RepositoryPattern\RepositoryPatter
 After publishing the configuration file just run the below command
 
 ```
-php artisan make:repo ModelName
+php artisan make:repo YOURMODEL
 ```
 
 That's it, Now you've successfully implemented the repository pattern
@@ -43,17 +43,17 @@ That's it, Now you've successfully implemented the repository pattern
 ## Example
 
 ```php
-php artisan make:repo Car
+php artisan make:repo Product
 ```
 
-#### CarRepositoryInterface.php
+#### ProductRepositoryInterface.php
 
 ```php
 <?php
 
 namespace App\Repositories;
 
-interface CarRepositoryInterface
+interface ProductRepositoryInterface
 {
     /**
      * Get's a record by it's ID
@@ -86,7 +86,7 @@ interface CarRepositoryInterface
 }
 ```
 
-#### CarRepository.php
+#### ProductRepository.php
 
 ```php
 <?php
@@ -164,31 +164,31 @@ class RepositoryBackendServiceProvider extends ServiceProvider
             * Register your Repository classes and interface here
             **/
 
-            'App\Repositories\CarRepositoryInterface',
-            'App\Repositories\CarRepository'
+            'App\Repositories\ProductRepositoryInterface',
+            'App\Repositories\ProductRepository'
         );
     }
 }
 
 ```
 
-##### And now in your ```app/Http/Controllers/Carcontroller```
+##### And now in your ```app/Http/Controllers/ProductController```
 
 ```php
 <?php
 
 namespace App\Http\Controllers;
 
-use App\Car;
-use App\Repositories\CarRepositoryInterface;
+use App\Models\Product;
+use App\Repositories\ProductRepositoryInterface;
 
-class CarController extends Controller
+class ProductController extends Controller
 {
-    protected $car;
+    protected $product;
 
-    public function __construct(CarRepositoryInterface $car)
+    public function __construct(ProductRepositoryInterface $product)
     {
-        $this->$car = $car;
+        $this->$product = $product;
     }
 
     /**
@@ -198,7 +198,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        $data = $this->car->all();
+        $data = $this->product->all();
 
         return $data;
     }
@@ -206,4 +206,4 @@ class CarController extends Controller
 }
 ```
 
-##### That's it you've successfully implemented Repository pattern in your code.
+##### That's it , All done .
