@@ -88,7 +88,6 @@ interface ProductRepositoryInterface
 
 #### ProductRepository.php
 
-```php
 <?php
 
 namespace App\Repositories;
@@ -137,10 +136,9 @@ class ProductRepository implements ProductRepositoryInterface
      */
     public function update($id, array $data)
     {
-        Car::find($id)->update($data);
+        Product::find($id)->update($data);
     }
 }
-```
 
 ##### Now go to
 
