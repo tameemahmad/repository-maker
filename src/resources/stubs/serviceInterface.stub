@@ -2,7 +2,7 @@
 
 namespace App\Services\Contracts;
 
-use KesmenEnver\ServiceLayer\ServiceInterface;
+use Temify\RepositoryPattern\ServiceInterface;
 
 
 interface {{interface}} extends ServiceInterface
