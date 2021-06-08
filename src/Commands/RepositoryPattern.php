@@ -12,14 +12,14 @@ class RepositoryPattern extends Command
      *
      * @var string
      */
-    protected $signature = 'make:repo {name : Class (Singular), e.g User, Place, Car, Post}';
+    protected $signature = 'make:repo {name : Class (Singular), e.g User, Prpduct, Image, Post}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create Repository Pattern with a single command';
+    protected $description = 'Create Repository with a single command';
 
     /**
      * Create a new command instance.
@@ -42,6 +42,6 @@ class RepositoryPattern extends Command
 
         RepositoryService::ImplementNow($name);
 
-        $this->info("Repository pattern implemented for model ". $name);
+        $this->info("Repository implemented for model ". $name);
     }
 }

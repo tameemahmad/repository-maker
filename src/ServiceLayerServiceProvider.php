@@ -2,9 +2,11 @@
 
 namespace Temify\RepositoryPattern;
 
+use Illuminate\Console\Command;
 use Illuminate\Support\ServiceProvider;
+use Temify\RepositoryPattern\Commands\ServiceMakeCommand;
 
-class ServiceLayerServiceProvider extends ServiceProvider
+class ServiceLayerServiceProvider extends Command
 {
     /**
      * Bootstrap services.
@@ -36,4 +38,16 @@ class ServiceLayerServiceProvider extends ServiceProvider
         });
         $this->commands('command.temify.service');
     }
+
+     /**
+     * Bootstrap services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->commands([
+            ServiceMakeCommand::class,
+        ]);
+    
 }
