@@ -1,6 +1,6 @@
 <?php
 
-namespace Temify\RepositoryPattern\Commands;
+namespace Temify\RepositoryPattern;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -31,7 +31,7 @@ class ServiceLayerServiceProvider extends ServiceProvider
      */
     private function registerServiceGenerator()
     {
-        $this->app->singleton('command.kesmenenver.service', function ($app) {
+        $this->app->singleton('command.temify.service', function ($app) {
             return $app['Temify\RepositoryPattern\Commands\ServiceMakeCommand'];
         });
         $this->commands('command.temify.service');
