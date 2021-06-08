@@ -66,12 +66,12 @@ class ServiceMakeCommand extends GeneratorCommand
 
     protected function getClassName()
     {
-        return ucwords(camel_case($this->getNameInput())) . 'Service';
+        return ucwords(Str::camel($this->getNameInput())) . 'Service';
     }
 
     protected function getInterfaceName()
     {
-        return ucwords(camel_case($this->getNameInput())) . 'ServiceInterface';
+        return ucwords(Str::camel($this->getNameInput())) . 'ServiceInterface';
     }
     /**
      * Get the stub file for the generator.
