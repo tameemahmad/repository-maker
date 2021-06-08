@@ -79,7 +79,7 @@ interface ProductRepositoryInterface
 
 }
 ```
-```Repositories/ProductRepository.php```
+```php
 
 #### ProductRepository.php
 
