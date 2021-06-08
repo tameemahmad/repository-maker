@@ -1,0 +1,40 @@
+{
+    "name": "temify/repository-pattern-maker",
+    "description": "create respository and interface and facade with single command",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Tameem Ahmad Shahzad",
+        "email": "tameemahmadshahzad@gmail.com"
+    }],
+    "keywords": [
+        "laravel",
+        "laravel5",
+        "laravel6",
+        "laravel7",
+        "laravel8"
+    ],
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "require-dev": {
+        "laravel/framework": ">=5.5"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Temify\\RepositoryPattern\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Temify\\RepositoryPattern\\RepositoryPatterServiceProvider"
+            ],
+            "aliases": {
+                "RepositoryPattern": "Temify\\RepositoryPattern\\Facades\\RepositoryPattern"
+            }
+        }
+    }
+}
