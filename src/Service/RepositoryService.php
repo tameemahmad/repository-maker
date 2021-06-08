@@ -8,7 +8,7 @@ class RepositoryService {
 
     protected static function getStubs($type)
     {
-        return file_get_contents(resource_path("vendor/temifyzafar/stubs/$type.stub"));
+        return file_get_contents(resource_path("vendor/temify/stubs/$type.stub"));
     }
 
     public static function ImplementNow($name)

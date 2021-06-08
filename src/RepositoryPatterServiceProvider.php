@@ -19,7 +19,7 @@ class RepositoryPatterServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/resources/stubs', 'RepositoryPattern');
 
         $this->publishes([
-            __DIR__.'/resources/stubs' => resource_path('vendor/temifyzafar/stubs'),
+            __DIR__.'/resources/stubs' => resource_path('vendor/temify/stubs'),
 //            __DIR__.'/config/RepositoryConfig.php' => config_path('RepositoryConfig.php'),
 
         ]);
