@@ -21,7 +21,7 @@
         "laravel/framework": ">=5.5"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
+    "prefer-stable": false,
     "autoload": {
         "psr-4": {
             "Temify\\RepositoryPattern\\": "src/"
