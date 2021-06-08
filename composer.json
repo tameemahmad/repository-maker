@@ -18,7 +18,7 @@
         "php": ">=7.4.0"
     },
     "require-dev": {
-        "laravel/framework": ">=5.5"
+        "laravel/framework": ">=7.2.5"
     },
     "minimum-stability": "dev",
     "prefer-stable": false,
@@ -31,7 +31,7 @@
         "laravel": {
             "providers": [
                 "Temify\\RepositoryPattern\\RepositoryPatterServiceProvider",
-                "Temify\\RepositoryPattern\\ServiceLayerServiceProviderr"
+                "Temify\\RepositoryPattern\\ServiceLayerServiceProvider"
             ],
             "aliases": {
                 "RepositoryPattern": "Temify\\RepositoryPattern\\Facades\\RepositoryPattern"
